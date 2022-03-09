@@ -1,0 +1,40 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Product;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // \App\Models\User::factory(10)->create();
+        Product::insert([
+            [
+                'title' => 'iphone',
+                'price' => '999',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'macbook',
+                'price' => '1199',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'samsung s22',
+                'price' => '899',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        ]);
+    }
+}
